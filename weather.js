@@ -43,7 +43,7 @@ function updateTime(k) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      alert("Please enable location permissions.");
+      alert("Please enable location permissions. For IOS Users, go to Settings > Privacy > Location Services.");
       break;
     case error.POSITION_UNAVAILABLE:
       alert("Location information is unavailable.");
@@ -155,7 +155,7 @@ fetch("https://api.data.gov.sg/v1/environment/4-day-weather-forecast")
 .then((response) => response.json())
 .then(function(data){
 	let json = data.items[0].forecasts;
-	document.querySelector(".valid").innerText = `Last updated at: ${data.items[0].timestamp}`;
+	document.querySelector(".valid").innerText = `Last updated at: ${new Date()}`;
 	for (let i = 0; i < 4; i++){
 		readings[i].innerText = json[i].forecast;
 		if (json[i].forecast.includes("Fair")){
