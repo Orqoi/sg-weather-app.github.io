@@ -98,12 +98,12 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 			background.src = "./backgrounds/rain.mp4"
 		}
 		else if (desc.innerText.includes("Fair") || desc.innerText.includes("Cloudy")){
-			if (desc.innerText.includes("Night")){
+			if (hourNow >= 18 && hourNow <= 20){
+				background.src = "./backgrounds/cloudy-evening.mp4"
+			}
+			else if (desc.innerText.includes("Night")){
 				background.src = "./backgrounds/cloudy-night.mp4"
 				els.style.color = "white";
-			}
-			else if (hourNow >= 18 && hourNow <= 20){
-				background.src = "./backgrounds/cloudy-evening.mp4"
 			}
 			else{
 				background.setAttribute("src", "./backgrounds/cloudy.mp4");
