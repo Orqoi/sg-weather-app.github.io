@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="weather today singapore">
+	<link rel = "stylesheet" type = "text/css" href = "weather.css">
+	<title>Singapore Weather Today</title>
+</head>
+<body>
+	<div class="load">
+		<div>
+			<img src="./animated/load.svg"/>
+			<h2>Loading</h2>
+		</div>
+	</div>
+	<video playsinline autoplay muted loop id="bgvid" src="" type="video/mp4">
+	</video>
+	<main class="fade">
+		<div class="day-wrapper">
+			<div class="date-container">
+				<h3 class="date"></h3>
+				<h3 id="time"></h3>
+			</div>
+			<div class="weather-container">
+				<div class="weather-text">
+					<div id="location"></div>
+					<div class="temperature"></div>
+					<div id="description"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="week-wrapper">
+			<div class="day-1-wrapper forecast">
+				<div class="forecast-day">
+				</div>
+				<div>
+					<img src="" alt ="weather icon" class="forecast-icon"/>
+				</div>
+				<div class="forecast-temperature">
+				</div>
+				<div class="forecast-reading">
+				</div>
+			</div>
+			<div class="day-2-wrapper forecast">
+				<div class="forecast-day">
+				</div>
+				<div>
+					<img src="" alt ="weather icon" class="forecast-icon"/>
+				</div>
+				<div class="forecast-temperature">
+				</div>
+				<div class="forecast-reading">
+				</div>
+			</div>
+			<div class="day-3-wrapper forecast">
+				<div class="forecast-day">
+				</div>
+				<div>
+					<img src="" alt ="weather icon" class="forecast-icon"/>
+				</div>
+				<div class="forecast-temperature">
+				</div>
+				<div class="forecast-reading">
+				</div>
+			</div>
+			<div class="day-4-wrapper forecast">
+				<div class="forecast-day">
+				</div>
+				<div>
+					<img src="" alt ="weather icon" class="forecast-icon"/>
+				</div>
+				<div class="forecast-temperature">
+				</div>
+				<div class="forecast-reading">
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<h6 class="footnote valid"></h6>
+		<h6 class="footnote">Powered by Gov.sg</h6>
+	</footer>
+	<script src="weather.js"></script>
+</body>
+</html>
