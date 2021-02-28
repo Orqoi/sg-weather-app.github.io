@@ -40,6 +40,23 @@ function updateTime(k) {
   }
 }
 
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+
 function animateLoad(){
 	const loader = document.querySelector('h2');
 	function addDot(){
@@ -112,7 +129,7 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 		document.getElementById("location").innerText = min;
 		
 
-	});
+	}, showError);
 	
 })
 .catch(function(error){
