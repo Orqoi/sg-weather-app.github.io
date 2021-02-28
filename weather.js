@@ -43,7 +43,7 @@ function updateTime(k) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      alert("User denied the request for Geolocation.");
+      alert("Please enable location permissions.");
       break;
     case error.POSITION_UNAVAILABLE:
       alert("Location information is unavailable.");
