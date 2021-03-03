@@ -22,7 +22,7 @@ body{
 }
 
 main{
-	display: none;
+	overflow-y: none;
 	font-size: 3rem;
 	text-align: center;
 	flex-grow: 1;
