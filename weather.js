@@ -126,7 +126,7 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 		}
 		document.getElementById("location").innerText = min;
                 load.style.display = "none";
-		main.style.overflowY = "initial";
+		main.style.display = "initial";
 		
 
 	}, showError);
