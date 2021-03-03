@@ -23,7 +23,7 @@ function currentTime() {
   sec = updateTime(sec);
   let i = 1;
   for(let eachday of nextDays){
-  	eachday.innerText = (date.getDay() + 1 > 11) ? days[date.getDay() + i - 12] : days[date.getDay() + i];
+  	eachday.innerText = (date.getDay() + i > 11) ? days[date.getDay() + i - 12] : days[date.getDay() + i];
   	i++;
   }
   document.querySelector(".date").innerText = dayToday + ", " + output;
