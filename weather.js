@@ -80,8 +80,6 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 
 		let load = document.querySelector(".load");
 		let main = document.querySelector("main");
-		load.style.display = "none";
-		main.style.overflow-y = "auto";
 		let lat1 = position.coords.latitude;
 		let lon1 = position.coords.longitude;
 		let areas = {};
@@ -127,6 +125,8 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 			}
 		}
 		document.getElementById("location").innerText = min;
+                load.style.display = "none";
+		main.style.overflow-y = "auto";
 		
 
 	}, showError);
