@@ -129,7 +129,7 @@ fetch("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast")
 		function waiting(){
 			load.style.display = "none";
 			main.style.display = "initial";
-			footer.style.display = "initial";
+			footer.style.display = "flex";
 		}
 		setTimeout(waiting, 500);
 		
